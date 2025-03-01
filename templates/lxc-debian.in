@@ -405,7 +405,7 @@ apt-transport-https
         apt_gpg_opt="--keyring=${releasekeyring}"
     elif [ -f "$lreleasekeyring" ]; then
         apt_gpg_opt="--keyring=${lreleasekeyring}"
-    elif [ ${releasekeyring}" = "${DEBIAN_ARCHIVE_KEYRING} -a "$DOWNLOAD_KEYRING" = 1 ]; then
+    elif [ "${releasekeyring}" = "${DEBIAN_ARCHIVE_KEYRING}" -a "$DOWNLOAD_KEYRING" = 1 ]; then
         [ ! -d "/etc/apt/trusted.gpg.d" ] && lreleasekeyring="$cache/archive-key.gpg"
         if [[ "$(id -u)" == "0" ]]; then
             case $release in
